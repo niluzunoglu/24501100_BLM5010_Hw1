@@ -35,6 +35,8 @@ ___
 
         LogisticRegressionClass.py # Ana objenin bulunduğu dosya
 
+        utils.py          # Yardımcı fonksiyonların bulunduğu dosya
+
         requirements.txt   # Gerekli kütüphaneler
 
         dataset/           # Veri setlerini içerir
