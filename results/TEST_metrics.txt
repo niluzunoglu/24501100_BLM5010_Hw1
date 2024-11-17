@@ -1,0 +1,18 @@
+Log Key             Log Value           
+========================================
+data_type           TEST                
+accuracy            0.3                 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 22:57:46 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TEST                
+accuracy            0.3                 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 23:01:04 
+========================================

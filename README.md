@@ -15,10 +15,16 @@ komutu ile yüklenebilir.
 ___
 
 ## Çalıştırma
-Logistic Regression sınıfından oluşturulacak bir obje ile,
-eğitim ve değerlendirme main.py dosyasındaki main fonksiyonunda yapılmaktadır. Bu fonksiyon
 
-``` python main.py ```
+Projenin eğitim kısmı train.py dosyasının içerisindeki fonksiyonlar ile yapılmaktadır. Bu dosya
+
+``` python train.py ```
+
+ komutu kullanılarak çalıştırılabilir.
+
+Kaydedilen ağırlıklar ile değerlendirmeler test.py dosyasından yapılmaktadır. Bu dosya 
+
+``` python test.py ```
 
  komutu kullanılarak çalıştırılabilir.
 ___
@@ -27,27 +33,35 @@ ___
 
     proje_klasoru/
 
-        main.py           # Model eğitimi için ana dosya
-
         eval.py            # Model değerlendirme dosyası
 
         test.py            # Yazılan fonksiyonların testlerinin bulunduğu dosya
 
-        LogisticRegressionClass.py # Ana objenin bulunduğu dosya
+        train.py            # Eğitimlerin yapıldığı dosya
 
         utils.py          # Yardımcı fonksiyonların bulunduğu dosya
+
+        common.py          # test.py ve train.py dosyalarının ortak fonksiyonlarının bulunduğu dosya
 
         requirements.txt   # Gerekli kütüphaneler
 
         dataset/           # Veri setlerini içerir
 
-            hw1Data.txt      # Eğitim, Doğrulama ve Test verileri
+            examResultsAndLabels.txt      # Eğitim, Doğrulama ve Test verileri
 
         results/           # Sonuçların saklandığı klasör
 
-        model_output/  # Eğitilen model çıktıları
+            costs-per-epoch/ # Ayrıntılı logların (her bir epoch için kayıp miktarı) saklandığı dizin
 
-        logs/          # Eğitim sırasında üretilen log  dosyaları
+            TEST_metrics.txt    # Test metriklerini barındıran dosya.
+
+            TRAIN_metrics.txt   # Eğitim metriklerini barındıran dosya.
+
+            VALIDATION_metrics.txt  # Validasyon metriklerini barındıran dosya
+
+        saved_models/       # Kaydedilen model ağırlıkları burada bulunur.
+
+        graphs/          # Üretilen grafikler burada bulunur.
 ___
 
 ### Öğrenci Bilgileri

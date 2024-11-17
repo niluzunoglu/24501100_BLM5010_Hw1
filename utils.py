@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import numpy as np
+import os
 
 def load_data(filepath):
 
@@ -81,48 +82,72 @@ def plot_data(X, y, title, x_label, y_label):
 
     plt.savefig(title+".jpg") 
 
-def write_to_txt(output, file_name="output.txt"):
-  """
-  Verilen bir çıktıyı bir .txt dosyasına yazar.
+def write_logs_to_txt(logs, file_name="output.txt"):
 
-  Argümanlar:
-      output (str): Yazılacak içerik.
-      file_name (str): Dosya adı (varsayılan: "output.txt").
-      
-    Çıktı:
-        Belirli bir çıktısı yok. Dosyaya yazma işlemini gerçekleştirir.
-  """
-  try:
-      with open(file_name, "w", encoding="utf-8") as file:
-          file.write(str(output))
-      print(f"Çıktı başarıyla '{file_name}' dosyasına yazıldı.")
-      
-  except Exception as e:
-      print(f"Hata: {e}")
-      
-def write_to_excel(data, file_name="output.xlsx"):
     """
-    Verilen bir veri yapısını (sözlük veya DataFrame) bir Excel dosyasına yazar.
+    Verilen log verilerini hizalı bir şekilde bir .txt dosyasına yazar.
 
     Argümanlar:
-        data (dict veya pandas.DataFrame): Yazılacak veri.
-        file_name (str): Dosya adı (varsayılan: "output.xlsx").
-        
-    Çıktı:
-        Belirli bir çıktısı yok. Excel dosyasına yazma işlemini gerçekleştirir.
+        logs (dict): Log verilerini içeren sözlük.
+        file_name (str): Dosya adı (varsayılan: "logs.txt").
     """
-    try:
-        # Eğer veri bir sözlükse, DataFrame'e dönüştür
-        if isinstance(data, dict):
-            data = pd.DataFrame(data)
+    
+    # Dosya yolunun bulunduğu dizini al
+    directory = os.path.dirname(file_name)
 
-        # DataFrame'i Excel'e yaz
-        data.to_excel(file_name, index=False, engine="openpyxl")
-        print(f"Çıktı başarıyla '{file_name}' dosyasına yazıldı.")
+    # Dizin yoksa oluştur
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory)
         
+    try:
+        with open(file_name, "a", encoding="utf-8") as file:
+            
+            file.write(f"{'Log Key':<20}{'Log Value':<20}\n")
+            file.write("=" * 40 + "\n")
+            
+            for key, value in logs.items():
+                
+                if(key=="cost_list"):
+                    pass
+                else:
+                    file.write(f"{key:<20}{str(value):<20}\n")
+                
+            file.write("=" * 40 + "\n")
+        
+        print(f"Loglar başarıyla '{file_name}' dosyasına yazıldı.")
     except Exception as e:
         print(f"Hata: {e}")
+
+def write_costs_to_txt(logs, file_name="costs_per_epoch.txt"):
+
+    """
+    Verilen cost verilerini hizalı bir şekilde bir .txt dosyasına yazar.
+
+    Argümanlar:
+        logs (dict): Log verilerini içeren sözlük.
+        file_name (str): Dosya adı (varsayılan: "costs_per_epoch.txt").
+    """
+    
+    directory = os.path.dirname(file_name)
+
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory)
         
+    try:
+        with open(file_name, "a", encoding="utf-8") as file:
+            
+            file.write(f"{'Epoch':<20}{'Cost':<20}\n")
+            file.write("=" * 40 + "\n")
+            
+            for log in logs["cost_list"]:
+                file.write(f"{log['epoch']:<20}{log['cost']:<20}\n")
+                
+            file.write("=" * 40 + "\n")
+        
+        print(f"Loglar başarıyla '{file_name}' dosyasına yazıldı.")
+    except Exception as e:
+        print(f"Hata: {e}")
+    
 def plot_train_val_graph(train_loss, validation_loss):
 
   # X ekseni için örneklerin sırası
