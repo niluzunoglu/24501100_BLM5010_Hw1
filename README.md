@@ -31,6 +31,8 @@ ___
 
         eval.py            # Model değerlendirme dosyası
 
+        test.py            # Yazılan fonksiyonların testlerinin bulunduğu dosya
+
         LogisticRegressionClass.py # Ana objenin bulunduğu dosya
 
         requirements.txt   # Gerekli kütüphaneler
@@ -43,8 +45,7 @@ ___
 
         model_output/  # Eğitilen model çıktıları
 
-        logs/          # Eğitim sırasında üretilen log 
-dosyaları
+        logs/          # Eğitim sırasında üretilen log  dosyaları
 ___
 
 ### Öğrenci Bilgileri
