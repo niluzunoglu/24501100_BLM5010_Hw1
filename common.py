@@ -118,13 +118,13 @@ def calculate_cross_entropy_loss(y_target, y_predicted):
 def calculate_cross_entropy_loss_for_one_sample(y_true, y_pred):
     
     """
-    Tek bir örnek için çapraz entropi kaybını hesaplar.
+    Tek bir örnek için cross entropy loss hesaplar.
     
-    Parametreler:
+    Argümanlar:
     - y_true: Gerçek etiket (0 veya 1)
     - y_pred: Tahmin edilen olasılık (0 ile 1 arasında bir değer)
     
-    Dönüş:
+    Çıktı:
     - Kayıp değeri
     """
     
