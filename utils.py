@@ -35,13 +35,13 @@ def split_data(X, y):
     Çıktı:
     
         data (dict) : Aşağıda bulunan değerleri içeren sözlük yapısı
-            X_train (): Eğitim verisinin input değerleri
-            X_val (): Doğrulama verisinin input değerleri
-            X_test (): Test verisinin input değerleri
+            X_train (pandas.core.frame.DataFrame): Eğitim verisinin input değerleri
+            X_val (pandas.core.frame.DataFrame): Doğrulama verisinin input değerleri
+            X_test (pandas.core.frame.DataFrame): Test verisinin input değerleri
 
-            y_train (): Eğitim verisinin etiket (label) değerleri
-            y_val () : Doğrulama verisinin etiket (label) değerleri
-            y_test () : Test verisinin etiket (label) değerleri
+            y_train (pandas.core.series.Series): Eğitim verisinin etiket (label) değerleri
+            y_val (pandas.core.series.Series) : Doğrulama verisinin etiket (label) değerleri
+            y_test (pandas.core.series.Series) : Test verisinin etiket (label) değerleri
     """
     
     X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.4, random_state=42)

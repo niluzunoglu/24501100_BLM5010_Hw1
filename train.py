@@ -2,6 +2,7 @@ from utils import load_data, split_data, write_logs_to_txt, write_costs_to_txt
 from common import *
 from time import time
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 class LogisticReggression_Train:
     
@@ -26,12 +27,18 @@ class LogisticReggression_Train:
         self.logs = {}
         self.data_type = data_type
         
+        self.X = None
+        self.y = None
+    
         # Alınan veriden train ve validation verilerinin çekilmesi.
         self.X_train = data["X_train"]
         self.y_train = data["y_train"]
 
         self.X_val = data["X_val"]
         self.y_val = data["y_val"]
+        
+        
+        print("[*] Train ve validasyon verileri çekildi.")
         
     
     def train(self):
@@ -51,51 +58,73 @@ class LogisticReggression_Train:
           Eğer istenirse cost/epoch grafiğini çizdirir. 
         """
 
-        X, y = 0,0 
 
         if self.data_type == "TRAIN":
-          X = self.X_train
-          y = self.y_train
+            self.X = self.X_train
+            self.y = self.y_train
 
         elif self.data_type == "VALIDATION":
-          X = self.X_val
-          y = self.y_val
+            self.X = self.X_val
+            self.y = self.y_val
       
         # Ağırlıkları ilklendirme
-        self.weights = np.zeros(X.shape[1])
+        self.weights = np.zeros(self.X.shape[1])
         #self.bias = np.random.rand()
+        self.bias = 0 # Random seçilmiş bir sayı
         
-        self.bias = 7 # Random seçilmiş bir sayı
-        
+        """ 
         # Ağırlıklar ile ilk tahminin yapılması
         y_predicted = calculate_prediction(X, self.weights, self.bias)
 
         # İlk tahmin için cross entropy loss hesabının yapılması
         average_cost = calculate_average_cross_entropy_loss(y, y_predicted)
-        self.weights = calculate_stochastic_gradient_descent(self.weights, X, y, y_predicted, self.learning_rate, y.size)
-
-        cost_list = []
-
+        self.weights = calculate_stochastic_gradient_descent(self.weights, X, y, y_predicted, self.learning_rate)
+        """
+        self.cost_list = []
+        
         for i in range(self.epochs):
             
-            y_predicted = calculate_prediction(X, self.weights, self.bias)
+            # Bu döngü her bir epoch için 1 defa döner.
             
-            losses_for_each_sample = np.array([calculate_cross_entropy_loss(y_true, y_pred_i) for y_true, y_pred_i in zip(y, y_predicted)])
+            print("[*] Epoch - ",i)
+            total_loss = 0 
+            self.y_predicted = np.zeros(len(self.y)) 
+            
+            for j in range(0, len(self.y)):
+                
+                # Bu döngü her bir örnek için bir defa döner.
+                # Bu döngü içerisinde tahmin yapılır, loss ve yeni weightler hesaplanır.
+                
+                x_sample = self.X.iloc[j]
+                y_sample = self.y.iloc[j]
+                
+                # Prediction yapılır.
+                y_predicted_sample = calculate_prediction(x_sample, self.weights, self.bias)
+                                
+                # Örnek başına kayıp hesaplanır.
+                loss = calculate_cross_entropy_loss_for_one_sample(y_sample, y_predicted_sample)
+                
+                total_loss += loss 
+                
+                # Ağırlıkları stochastic gradient descent ile güncelle
+                self.weights = calculate_stochastic_gradient_descent(self.weights, x_sample, y_sample, y_predicted_sample, self.learning_rate)
 
-            cost = calculate_average_cross_entropy_loss(y, y_predicted)
-            cost_list.append({"epoch":i,"cost":float(cost)})
+                self.y_predicted[j] = y_predicted_sample
 
-            # SGD algoritması ile yeni ağırlıkların hesaplanması
-            self.weights = calculate_stochastic_gradient_descent(self.weights, X, y, y_predicted, self.learning_rate, y.size)
+            # Ortalama epoch kaybı
+            cost = total_loss / len(self.y)
+            print("[*] Cost -",cost)
+            
+            self.cost_list.append({"epoch": i, "cost": float(cost)})
 
-            # Belirli epochlarda cost değerlerini görebilmek için yazdırılmıştır.
-            #if i % 10 == 0:
-            #    print('Cost: {}'.format(cost))
+            # Belirli epochlarda cost değerlerini yazdır (isteğe bağlı)
+            # if i % 10 == 0:
+            #    print(f"Epoch {i}, Cost: {cost}")
 
         # En son epoch sonrası ağırlık değerleri
         print('Final weights: {}'.format(self.weights))
 
-        values = calculate_results(y, y_predicted)
+        values = calculate_results(self.y, self.y_predicted)
         print("Accuracy : ", calculate_accuracy(values))
         print("Precision : ", calculate_precision(values))
         print("Recall :", calculate_recall(values))
@@ -109,7 +138,7 @@ class LogisticReggression_Train:
         self.logs["precision"] = calculate_precision(values)
         self.logs["recall"] = calculate_recall(values)
         self.logs["fscore"] = calculate_fscore(values)
-        self.logs["cost_list"] = cost_list
+        self.logs["cost_list"] = self.cost_list
         self.logs["datetime"] = datetime.fromtimestamp(time()).strftime("%d-%m-%Y %H:%M:%S")
         
     
@@ -138,6 +167,25 @@ class LogisticReggression_Train:
         """
         return write_costs_to_txt(self.logs, f"results/costs-per-epoch/{self.data_type}_lr_{self.learning_rate}_epoch_{self.epochs}_costs_per_epoch.txt")
 
+    def plot_cost_from_cost_list(self):
+        """
+        Her epoch için kaydedilen cost verisinden bir grafiği çizer.
+        
+        Args:
+            cost_list (list): Her eleman {"epoch": i, "cost": value} formatında bir liste.
+        """
+        # Epoch ve cost değerlerini ayır
+        epochs = [entry["epoch"] for entry in self.cost_list]
+        costs = [entry["cost"] for entry in self.cost_list]
+
+        plt.figure(figsize=(10, 6))
+        plt.plot(epochs, costs, label='Ortalama Cross-Entropy Loss', color='b')
+        plt.xlabel('Epoch')
+        plt.ylabel('Ortalama Cross-Entropy Loss')
+        plt.title('Eğitim Süresince Loss Değişimi')
+        plt.grid(True)
+        plt.legend()
+        plt.savefig(f"graphs/cost_sample_Graphs/{self.epochs}_{self.learning_rate}.png")
 
 if __name__ == "__main__":
     
@@ -177,3 +225,4 @@ if __name__ == "__main__":
     train_Logistic_Regression.save_model()
     train_Logistic_Regression.save_logs()    
     train_Logistic_Regression.save_costs_per_epoch()
+    train_Logistic_Regression.plot_cost_from_cost_list()

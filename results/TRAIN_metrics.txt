@@ -163,3 +163,707 @@ recall              0.20588235294117646
 fscore              0.22222222222222224 
 datetime            17-11-2024 22:50:55 
 ========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 23:26:34 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 23:29:50 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.1                 
+accuracy            0.4166666666666667  
+precision           0.0                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 23:30:54 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               50                  
+learning_rate       0.01                
+accuracy            0.6333333333333333  
+precision           0.625               
+recall              0.8823529411764706  
+fscore              0.7317073170731708  
+datetime            17-11-2024 23:31:50 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            17-11-2024 23:53:49 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            17-11-2024 23:54:27 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.01                
+accuracy            0.65                
+precision           0.6181818181818182  
+recall              1.0                 
+fscore              0.7640449438202247  
+datetime            17-11-2024 23:55:19 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.01                
+accuracy            0.65                
+precision           0.6181818181818182  
+recall              1.0                 
+fscore              0.7640449438202247  
+datetime            17-11-2024 23:55:53 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               50                  
+learning_rate       0.01                
+accuracy            0.6333333333333333  
+precision           0.625               
+recall              0.8823529411764706  
+fscore              0.7317073170731708  
+datetime            17-11-2024 23:56:16 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               200                 
+learning_rate       0.01                
+accuracy            0.6166666666666667  
+precision           0.6122448979591837  
+recall              0.8823529411764706  
+fscore              0.7228915662650602  
+datetime            17-11-2024 23:56:41 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            17-11-2024 23:57:11 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               50                  
+learning_rate       0.1                 
+accuracy            0.5833333333333334  
+precision           0.6363636363636364  
+recall              0.6176470588235294  
+fscore              0.6268656716417911  
+datetime            17-11-2024 23:58:00 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.5                 
+accuracy            0.4166666666666667  
+precision           0.0                 
+recall              0.0                 
+fscore              nan                 
+datetime            17-11-2024 23:58:19 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.5                 
+accuracy            0.7                 
+precision           0.6538461538461539  
+recall              1.0                 
+fscore              0.7906976744186047  
+datetime            17-11-2024 23:59:02 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10                  
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            17-11-2024 23:59:26 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               20                  
+learning_rate       0.1                 
+accuracy            0.6                 
+precision           0.5862068965517241  
+recall              1.0                 
+fscore              0.7391304347826086  
+datetime            17-11-2024 23:59:43 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               16                  
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            18-11-2024 00:00:03 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               13                  
+learning_rate       0.1                 
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            18-11-2024 00:00:32 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               20                  
+learning_rate       0.01                
+accuracy            0.6                 
+precision           0.5862068965517241  
+recall              1.0                 
+fscore              0.7391304347826086  
+datetime            18-11-2024 00:01:17 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               17                  
+learning_rate       0.01                
+accuracy            0.6833333333333333  
+precision           0.6415094339622641  
+recall              1.0                 
+fscore              0.7816091954022989  
+datetime            18-11-2024 00:01:40 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               16                  
+learning_rate       0.01                
+accuracy            0.5666666666666667  
+precision           0.5666666666666667  
+recall              1.0                 
+fscore              0.7234042553191489  
+datetime            18-11-2024 00:02:00 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               15                  
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 00:02:34 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               20                  
+learning_rate       0.001               
+accuracy            0.6                 
+precision           0.5862068965517241  
+recall              1.0                 
+fscore              0.7391304347826086  
+datetime            18-11-2024 00:02:54 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.8                 
+accuracy            0.4166666666666667  
+precision           0.0                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 00:04:08 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               20                  
+learning_rate       0.7                 
+accuracy            0.6                 
+precision           0.5862068965517241  
+recall              1.0                 
+fscore              0.7391304347826086  
+datetime            18-11-2024 00:04:27 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               50                  
+learning_rate       0.0001              
+accuracy            0.5833333333333334  
+precision           0.6363636363636364  
+recall              0.6176470588235294  
+fscore              0.6268656716417911  
+datetime            18-11-2024 00:04:56 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               17                  
+learning_rate       0.001               
+accuracy            0.6833333333333333  
+precision           0.6415094339622641  
+recall              1.0                 
+fscore              0.7816091954022989  
+datetime            18-11-2024 00:05:28 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               20                  
+learning_rate       0.001               
+accuracy            0.6                 
+precision           0.5862068965517241  
+recall              1.0                 
+fscore              0.7391304347826086  
+datetime            18-11-2024 00:05:58 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.001               
+accuracy            0.7                 
+precision           0.6538461538461539  
+recall              1.0                 
+fscore              0.7906976744186047  
+datetime            18-11-2024 00:06:36 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.9                 
+accuracy            0.4166666666666667  
+precision           0.0                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 00:06:58 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.058823529411764705
+fscore              0.10526315789473684 
+datetime            18-11-2024 20:46:04 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.058823529411764705
+fscore              0.10526315789473684 
+datetime            18-11-2024 20:47:12 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.058823529411764705
+fscore              0.10526315789473684 
+datetime            18-11-2024 20:47:26 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.0001              
+accuracy            0.2833333333333333  
+precision           0.3953488372093023  
+recall              0.5                 
+fscore              0.44155844155844154 
+datetime            18-11-2024 20:47:52 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.001               
+accuracy            0.16666666666666666 
+precision           0.23333333333333334 
+recall              0.20588235294117646 
+fscore              0.21874999999999997 
+datetime            18-11-2024 20:48:22 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.02                
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 20:51:17 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       1e-05               
+accuracy            0.2833333333333333  
+precision           0.3953488372093023  
+recall              0.5                 
+fscore              0.44155844155844154 
+datetime            18-11-2024 20:51:53 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100000              
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 20:54:51 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           nan                 
+recall              0.0                 
+fscore              nan                 
+datetime            18-11-2024 21:27:29 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10                  
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.029411764705882353
+fscore              0.05555555555555555 
+datetime            18-11-2024 21:52:19 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10                  
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.029411764705882353
+fscore              0.05555555555555555 
+datetime            18-11-2024 21:55:31 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               5                   
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:05:04 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               5                   
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:05:38 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10                  
+learning_rate       0.1                 
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:07:37 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.01                
+accuracy            0.4666666666666667  
+precision           0.525               
+recall              0.6176470588235294  
+fscore              0.5675675675675677  
+datetime            18-11-2024 22:09:25 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.001               
+accuracy            0.38333333333333336 
+precision           0.4634146341463415  
+recall              0.5588235294117647  
+fscore              0.5066666666666667  
+datetime            18-11-2024 22:13:24 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.01                
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:17:49 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               5000                
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:20:34 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.01                
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:25:03 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       0.001               
+accuracy            0.38333333333333336 
+precision           0.4634146341463415  
+recall              0.5588235294117647  
+fscore              0.5066666666666667  
+datetime            18-11-2024 22:37:57 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               50                  
+learning_rate       0.1                 
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:38:26 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.1                 
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:38:57 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.001               
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:39:10 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.5                 
+accuracy            0.5                 
+precision           0.55                
+recall              0.6470588235294118  
+fscore              0.5945945945945946  
+datetime            18-11-2024 22:39:52 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               2000                
+learning_rate       0.8                 
+accuracy            0.4                 
+precision           0.475               
+recall              0.5588235294117647  
+fscore              0.5135135135135136  
+datetime            18-11-2024 22:41:05 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               5000                
+learning_rate       0.1                 
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:43:34 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               10000               
+learning_rate       1e-05               
+accuracy            0.2833333333333333  
+precision           0.3953488372093023  
+recall              0.5                 
+fscore              0.44155844155844154 
+datetime            18-11-2024 22:48:21 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.8                 
+accuracy            0.4666666666666667  
+precision           0.525               
+recall              0.6176470588235294  
+fscore              0.5675675675675677  
+datetime            18-11-2024 22:49:37 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.6                 
+accuracy            0.4666666666666667  
+precision           0.525               
+recall              0.6176470588235294  
+fscore              0.5675675675675677  
+datetime            18-11-2024 22:50:25 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.4                 
+accuracy            0.5                 
+precision           0.55                
+recall              0.6470588235294118  
+fscore              0.5945945945945946  
+datetime            18-11-2024 22:51:38 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               500                 
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:52:36 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.001               
+accuracy            0.36666666666666664 
+precision           0.4523809523809524  
+recall              0.5588235294117647  
+fscore              0.5                 
+datetime            18-11-2024 22:53:39 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               1000                
+learning_rate       0.5                 
+accuracy            0.5                 
+precision           0.55                
+recall              0.6470588235294118  
+fscore              0.5945945945945946  
+datetime            18-11-2024 22:54:28 
+========================================
+Log Key             Log Value           
+========================================
+data_type           TRAIN               
+epoch               100                 
+learning_rate       0.01                
+accuracy            0.43333333333333335 
+precision           0.5                 
+recall              0.5882352941176471  
+fscore              0.5405405405405405  
+datetime            18-11-2024 22:59:07 
+========================================

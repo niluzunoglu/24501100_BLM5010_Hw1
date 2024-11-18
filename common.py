@@ -110,13 +110,28 @@ def calculate_cross_entropy_loss(y_target, y_predicted):
         Cross Entropy Loss değeri.
     """
 
-    epsilon = 1e-15  
-    y_predicted = np.clip(y_predicted, epsilon, 1 - epsilon) 
-
     part1 = y_target * np.log(y_predicted)
     part2 = (1-y_target) * np.log(1-y_predicted)
 
     return -(part1+part2)
+
+def calculate_cross_entropy_loss_for_one_sample(y_true, y_pred):
+    
+    """
+    Tek bir örnek için çapraz entropi kaybını hesaplar.
+    
+    Parametreler:
+    - y_true: Gerçek etiket (0 veya 1)
+    - y_pred: Tahmin edilen olasılık (0 ile 1 arasında bir değer)
+    
+    Dönüş:
+    - Kayıp değeri
+    """
+    
+    epsilon = 1e-15
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon) 
+
+    return -(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
 
 def calculate_average_cross_entropy_loss( y_target, y_predicted):
 
@@ -133,15 +148,14 @@ def calculate_average_cross_entropy_loss( y_target, y_predicted):
     
     return calculate_cross_entropy_loss(y_target, y_predicted).mean()
 
-def calculate_stochastic_gradient_descent(weights, x_train, y_train, y_predicted, learning_rate, number_of_samples):
-
+def calculate_stochastic_gradient_descent(weights, x_sample, y_sample, y_predicted, learning_rate):
+    
     """
-    Bu fonksiyon, bir ağırlıklar dizisini alır (weights), ve bir önceki epochta tahmin edilen değere, 
-    kullanılan verinin sayısına, ve diğer çeşitli argümanlara göre bir gradient 
-    vektörü hesaplar. Bu vektöre göre learning rate'le birlikte yeni weigthlere karar verirler.
+    Bu fonksiyon, ağırlıklar dizisini (weights), tek bir örnek (x_sample, y_sample), örneğin predicted değeri ve öğrenme oranını alır.
+    Stochastic gradient descent ile ağırlıkları günceller.
     """
-
-    gradient = np.dot(x_train.T, (y_predicted - y_train)) / number_of_samples
+    
+    gradient = (y_predicted - y_sample) * x_sample
     weights -= learning_rate * gradient
 
-    return weights 
+    return weights

@@ -1,5 +1,5 @@
 from scipy.special import expit
-from LogisticRegressionClass import LogisticRegression
+from common import * 
 import keras
 from keras import backend as k
 import numpy as np
@@ -9,10 +9,8 @@ from utils import load_data,split_data
 
 # One Logistic Regression object to call the functions from the class
 
-X,y = load_data("dataset/hw1Data.txt")
+X,y = load_data("dataset/examResultsAndLabels.txt")
 data = split_data(X,y)
-
-logistic_regression_object = LogisticRegression(data, learning_rate = 0.1, epochs = 150)
 
 def test_sigmoid():
 
@@ -22,7 +20,7 @@ def test_sigmoid():
 
     for i in test_array:
 
-        if(expit(i) != logistic_regression_object.calculate_sigmoid(i)):
+        if(expit(i) != calculate_sigmoid(i)):
             print("[*] Yanlış var -",i)
         else:
             true_count += 1
@@ -42,7 +40,7 @@ def test_cross_entropy_loss():
 
     true_count = 0
     loss_real = tf.keras.losses.binary_crossentropy(y_true, y_pred)
-    loss_found = logistic_regression_object.calculate_average_cross_entropy_loss(y_true, y_pred)
+    loss_found = calculate_average_cross_entropy_loss(y_true, y_pred)
 
     
     epsilon = 1e-6  # küçük bir tolerans
@@ -61,7 +59,7 @@ def test_metrics():
     y_true = np.random.randint(0, 2, 100)
     y_pred = np.random.randint(0, 2, 100)
 
-    values = logistic_regression_object.calculate_results(y_true, y_pred)
+    values = calculate_results(y_true, y_pred)
 
     def are_equal(real, found):
         epsilon = 1e-6 
@@ -70,19 +68,19 @@ def test_metrics():
 
     all_true = True
 
-    if not(are_equal(accuracy_score(y_true, y_pred), logistic_regression_object.calculate_accuracy(values))):
+    if not(are_equal(accuracy_score(y_true, y_pred), calculate_accuracy(values))):
         print("[*] Accuracy ölçümü yanlış")
         all_true = False
 
-    if not(are_equal(precision_score(y_true, y_pred), logistic_regression_object.calculate_precision(values))):
+    if not(are_equal(precision_score(y_true, y_pred), calculate_precision(values))):
         print("[*] Precision ölçümü yanlış")
         all_true = False
 
-    if not(are_equal(recall_score(y_true, y_pred), logistic_regression_object.calculate_recall(values))):
+    if not(are_equal(recall_score(y_true, y_pred), calculate_recall(values))):
         print("[*] Recall ölçümü yanlış")
         all_true = False
 
-    if not(are_equal(f1_score(y_true, y_pred), logistic_regression_object.calculate_fscore(values))):
+    if not(are_equal(f1_score(y_true, y_pred), calculate_fscore(values))):
         print("[*] F1Score ölçümü yanlış")
         all_true = False
 
